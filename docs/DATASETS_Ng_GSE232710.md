@@ -3,6 +3,7 @@
 Este documento resume cómo organizar los datos en el repositorio. Consulta también el README principal para obtener todo el contexto.
 
 *1.scRNA-seq Ng et al. 2025*
+
 1.1. no son públicas por lo que no están disponibles ahora mismo
 1.2. descarga las matrices 10X Genomics (cuando estén disponibles) asociadas al artículo.
 1.3. colócalas en `data_raw/scRNAseq_Ng2025/` en subcarpetas por muestra.
