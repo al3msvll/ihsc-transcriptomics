@@ -13,7 +13,6 @@ El análisis se basa en dos fuentes principales:
 
 El objetivo es reproducir y extender los análisis de estos estudios, explorando cómo cambian los programas de expresión génica y las firmas de retinoides a lo largo de los distintos estados celulares del linaje iHSC.
 
----
 
 ## Contexto y motivo del estudio
 
@@ -25,7 +24,6 @@ Este análisis multi-ómico permite:
 2. **Cuantificar** el impacto del tratamiento con retinoides y del tiempo de exposición usando RNA-seq bulk (GSE232710).
 3. **Integrar** ambas capas de datos, proyectando firmas de expresión diferencial del bulk sobre las poblaciones celulares individuales, para identificar qué estados responden más fuertemente a los retinoides y a los programas HOXA/HSC.
 
----
 
 ## Fuentes de datos
 
@@ -40,8 +38,6 @@ Los datos que se utilizan en este proyecto provienen de repositorios públicos:
    GEO: GSE232710.  
    Datos de RNA-seq obtenidos de sobrenadantes celulares PB BFP 3B5A con diferentes tiempos y condiciones de tratamiento con ácido retinoico (RETA vs control).  
    Incluye archivo suplementario `GSE232710_RAW.tar` (MTX/TSV) y Series Matrix procesada.
-
----
 
 ## Metodología
 
@@ -70,8 +66,6 @@ Para los datos de Ng et al., el flujo general es:
 2. Estas firmas se usan en los notebooks para calcular **module scores** en el objeto de scRNA-seq (Scanpy/Seurat).
 3. Se visualizan las firmas en UMAP y se resumen los scores por cluster para identificar qué poblaciones celulares presentan mayor respuesta a RETA o a programas HOXA/HSC.
 
----
-
 ## Estructura del Repositorio
 
 Este repositorio se organiza de la siguiente forma:
@@ -95,8 +89,6 @@ Este repositorio se organiza de la siguiente forma:
    - `models/` para objetos pesados (modelos entrenados u otros artefactos).
 8. Una carpeta `src/` para funciones reutilizables y módulos de código, en caso de que se desarrolle una librería interna.
 
----
-
 ## Limitaciones del estudio
 
 Este análisis está sujeto a varias limitaciones, entre ellas:
@@ -106,21 +98,16 @@ Este análisis está sujeto a varias limitaciones, entre ellas:
 3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios.
 4. **Modelado simplificado**: los modelos de integración (scorecards, module scores) capturan solo una parte de la complejidad regulatoria subyacente.
 
----
-
 ## Autores del proyecto
 
 Autores: **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
 El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
 
----
 
 ## Licencia
 
 Este proyecto está pensado para ser distribuido bajo Licencia MIT (u otra licencia abierta equivalente).  
 Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
-
----
 
 ## Referencias
 
