@@ -94,9 +94,11 @@ Este análisis está sujeto a varias limitaciones, entre ellas:
 3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios.
 4. **Modelado simplificado**: los modelos de integración (scorecards, module scores) capturan solo una parte de la complejidad regulatoria subyacente.
 
-## Autores del proyecto
+## Autora del proyecto
 
-Autores: **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  @al3msvll
+**Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
+Github: @al3msvll
+
 Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
 El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
 
