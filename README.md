@@ -1,6 +1,6 @@
 # ihsc_transcriptomics
 
-## Análisis Multi-ómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
+## Análisis Multiómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
 
 ### Descripción general del proyecto
 
@@ -100,7 +100,8 @@ Este análisis está sujeto a varias limitaciones, entre ellas:
 
 ## Autores del proyecto
 
-Autores: **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
+Autores: **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  @al3msvll
+Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
 El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
 
 
