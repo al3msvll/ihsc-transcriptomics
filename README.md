@@ -65,43 +65,7 @@ Para los datos de Ng et al., el flujo general es:
 
 iHSC_transcriptomics
 
-├── README.md                     # descripción del proyecto
-├── .gitignore
-├── LICENSE                       # MIT
-│
-├── referencias/
-│   ├── REFERENCIAS.md            # referencias en texto
-│   └── referencias.bib           # BibTeX
-│
-├── docs/
-│   └── DATASETS_Ng_GSE232710.md  # cómo descargar/organizar los datos
-│
-├── data_raw/
-│   ├── scRNAseq_Ng2025/          # aquí irán las matrices 10X del paper
-│   └── GSE232710_bulk/           # aquí van GSE232710_RAW.tar y Series Matrix
-│
-├── data_processed/
-│   └── (objetos ya procesados: .h5ad, .rds, matrices limpias…) (por hacer)
-│
-├── scripts/
-│   ├── python/
-│   │   ├── unpack_GSE232710.py   # descomprime el RAW.tar
-│   │   └── build_scRNAseq_h5ad.py# construye el .h5ad a partir de 10X (hay que tener los datos preparados, todavía no están disponibles)
-│   ├── R/
-│       ├── DESeq2_GSE232710_template.R
-│       └── Seurat_iHSC_template.R
-│  
-│
-├── notebooks/
-│   ├── 01_scRNAseq_iHSC_QC.ipynb       # QC + clustering + UMAP
-│   ├── 02_bulk_GSE232710_DE.ipynb      # DESeq2 results + volcano/genes
-│   └── 03_integration_sc_bulk.ipynb    # firmas bulk proyectadas en single-cell
-│
-└── results/
-    ├── figures/                  # UMAPs, volcano plots, heatmaps, etc
-    ├── tables/                   # TSV/CSV con DE, listas de genes, scores…
-    └── models/                   # objetos pesados 
-
+<img width="1037" height="707" alt="markdown" src="https://github.com/user-attachments/assets/d34cd79a-ef98-4611-bf3f-f603422af791" />
 
 Este repositorio se organiza de la siguiente forma:
 
