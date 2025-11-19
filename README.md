@@ -1,8 +1,6 @@
 # ihsc_transcriptomics
-
 ## Análisis Multiómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
-
-### Descripción general del proyecto
+## Descripción general del proyecto
 
 La finalidad de este proyecto es estudiar la diferenciación de células madre hematopoyéticas de larga duración (iHSCs) derivadas de células iPSC humanas, integrando datos de **scRNA-seq** y **RNA-seq bulk**. 
 
@@ -13,7 +11,6 @@ El análisis se basa en dos fuentes principales:
 
 El objetivo es reproducir y extender los análisis de estos estudios, explorando cómo cambian los programas de expresión génica y las firmas de retinoides a lo largo de los distintos estados celulares del linaje iHSC.
 
-
 ## Contexto y motivo del estudio
 
 La generación de células madre hematopoyéticas funcionales a partir de iPSC representa un paso clave hacia terapias de reemplazo hematopoyético personalizadas y modelos de enfermedad más precisos. Sin embargo, comprender en detalle los estados celulares intermedios (mesodermo arterial, endotelio hemogénico, pre-HSC, iHSC) y su regulación por señales como el ácido retinoico sigue siendo un reto.
@@ -23,7 +20,6 @@ Este análisis multi-ómico permite:
 1. **Caracterizar** los estados celulares descritos por Ng et al. (endotelio arterial, HE, HSPC, progenitores) mediante scRNA-seq.
 2. **Cuantificar** el impacto del tratamiento con retinoides y del tiempo de exposición usando RNA-seq bulk (GSE232710).
 3. **Integrar** ambas capas de datos, proyectando firmas de expresión diferencial del bulk sobre las poblaciones celulares individuales, para identificar qué estados responden más fuertemente a los retinoides y a los programas HOXA/HSC.
-
 
 ## Fuentes de datos
 
