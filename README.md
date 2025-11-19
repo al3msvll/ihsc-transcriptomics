@@ -1,8 +1,6 @@
-# iHSC_multiomic_Ng2025_GSE232710
-
-## Análisis Multi-ómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
-
-### Descripción general del proyecto
+# ihsc_transcriptomics
+## Análisis Multiómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
+## Descripción general del proyecto
 
 La finalidad de este proyecto es estudiar la diferenciación de células madre hematopoyéticas de larga duración (iHSCs) derivadas de células iPSC humanas, integrando datos de **scRNA-seq** y **RNA-seq bulk**. 
 
@@ -13,8 +11,6 @@ El análisis se basa en dos fuentes principales:
 
 El objetivo es reproducir y extender los análisis de estos estudios, explorando cómo cambian los programas de expresión génica y las firmas de retinoides a lo largo de los distintos estados celulares del linaje iHSC.
 
----
-
 ## Contexto y motivo del estudio
 
 La generación de células madre hematopoyéticas funcionales a partir de iPSC representa un paso clave hacia terapias de reemplazo hematopoyético personalizadas y modelos de enfermedad más precisos. Sin embargo, comprender en detalle los estados celulares intermedios (mesodermo arterial, endotelio hemogénico, pre-HSC, iHSC) y su regulación por señales como el ácido retinoico sigue siendo un reto.
@@ -24,8 +20,6 @@ Este análisis multi-ómico permite:
 1. **Caracterizar** los estados celulares descritos por Ng et al. (endotelio arterial, HE, HSPC, progenitores) mediante scRNA-seq.
 2. **Cuantificar** el impacto del tratamiento con retinoides y del tiempo de exposición usando RNA-seq bulk (GSE232710).
 3. **Integrar** ambas capas de datos, proyectando firmas de expresión diferencial del bulk sobre las poblaciones celulares individuales, para identificar qué estados responden más fuertemente a los retinoides y a los programas HOXA/HSC.
-
----
 
 ## Fuentes de datos
 
@@ -40,8 +34,6 @@ Los datos que se utilizan en este proyecto provienen de repositorios públicos:
    GEO: GSE232710.  
    Datos de RNA-seq obtenidos de sobrenadantes celulares PB BFP 3B5A con diferentes tiempos y condiciones de tratamiento con ácido retinoico (RETA vs control).  
    Incluye archivo suplementario `GSE232710_RAW.tar` (MTX/TSV) y Series Matrix procesada.
-
----
 
 ## Metodología
 
@@ -70,15 +62,13 @@ Para los datos de Ng et al., el flujo general es:
 2. Estas firmas se usan en los notebooks para calcular **module scores** en el objeto de scRNA-seq (Scanpy/Seurat).
 3. Se visualizan las firmas en UMAP y se resumen los scores por cluster para identificar qué poblaciones celulares presentan mayor respuesta a RETA o a programas HOXA/HSC.
 
----
-
 ## Estructura del Repositorio
 
 Este repositorio se organiza de la siguiente forma:
 
-1. Un directorio principal con los archivos `README.md`, `.gitignore`, `LICENSE` (si se incluye) y archivos de entorno como `environment.yml` o `requirements.txt`.
+1. Un directorio principal con los archivos `README.md`, `.gitignore`, `LICENSE`
 2. Una carpeta `docs/` donde se documentan los datasets utilizados y notas metodológicas (`DATASETS_Ng_GSE232710.md`). 
-3. Una carpeta `data_raw/` con subcarpetas para los datos brutos:
+3. Una carpeta `data_raw/` con subcarpetas para los datos brutos: (en .gitignore ahora mismo porque está vacía)
    - `scRNAseq_Ng2025/` para matrices 10X u objetos crudos del scRNA-seq.
    - `GSE232710_bulk/` para los archivos RAW y la Series Matrix del RNA-seq bulk.
 4. Una carpeta `data_processed/` donde se guardan los objetos ya procesados (por ejemplo, `iHSC_scRNAseq_Ng2025_qc_norm.h5ad` o archivos `.rds`). 
@@ -93,34 +83,30 @@ Este repositorio se organiza de la siguiente forma:
    - `figures/` para las figuras generadas (UMAPs, volcano plots, heatmaps, etc.).
    - `tables/` para tablas de resultados (DESeq2, listas de genes, scores por cluster).
    - `models/` para objetos pesados (modelos entrenados u otros artefactos).
-8. Una carpeta `src/` para funciones reutilizables y módulos de código, en caso de que se desarrolle una librería interna.
-
----
-
+8. Una carpeta `referencias/' con los archivos utilizados como referencia para este repositorio
+   
 ## Limitaciones del estudio
 
 Este análisis está sujeto a varias limitaciones, entre ellas:
 
 1. **Disponibilidad y formato de los datos de scRNA-seq**: hasta que los datos de Ng et al. estén completamente accesibles, algunos pasos se basan en plantillas y supuestos sobre el formato 10X.
 2. **Calidad y homogeneidad de los datos bulk (GSE232710)**: diferencias en protocolos, tiempos de tratamiento y condiciones de cultivo pueden introducir ruido biológico y técnico.
-3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios.
+3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios. (es relativamente subjetiva)
 4. **Modelado simplificado**: los modelos de integración (scorecards, module scores) capturan solo una parte de la complejidad regulatoria subyacente.
 
----
+## Autora del proyecto
 
-## Autores del proyecto
+**Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
 
-Autores: **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
+Github: @al3msvll
+
+Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
 El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
 
----
 
 ## Licencia
 
-Este proyecto está pensado para ser distribuido bajo Licencia MIT (u otra licencia abierta equivalente).  
-Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
-
----
+Este proyecto está pensado para ser distribuido bajo Licencia MIT. Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
 
 ## Referencias
 
