@@ -66,9 +66,9 @@ Para los datos de Ng et al., el flujo general es:
 
 Este repositorio se organiza de la siguiente forma:
 
-1. Un directorio principal con los archivos `README.md`, `.gitignore`, `LICENSE` (si se incluye) y archivos de entorno como `environment.yml` o `requirements.txt`.
+1. Un directorio principal con los archivos `README.md`, `.gitignore`, `LICENSE`
 2. Una carpeta `docs/` donde se documentan los datasets utilizados y notas metodológicas (`DATASETS_Ng_GSE232710.md`). 
-3. Una carpeta `data_raw/` con subcarpetas para los datos brutos:
+3. Una carpeta `data_raw/` con subcarpetas para los datos brutos: (en .gitignore ahora mismo porque está vacía)
    - `scRNAseq_Ng2025/` para matrices 10X u objetos crudos del scRNA-seq.
    - `GSE232710_bulk/` para los archivos RAW y la Series Matrix del RNA-seq bulk.
 4. Una carpeta `data_processed/` donde se guardan los objetos ya procesados (por ejemplo, `iHSC_scRNAseq_Ng2025_qc_norm.h5ad` o archivos `.rds`). 
@@ -83,20 +83,21 @@ Este repositorio se organiza de la siguiente forma:
    - `figures/` para las figuras generadas (UMAPs, volcano plots, heatmaps, etc.).
    - `tables/` para tablas de resultados (DESeq2, listas de genes, scores por cluster).
    - `models/` para objetos pesados (modelos entrenados u otros artefactos).
-8. Una carpeta `src/` para funciones reutilizables y módulos de código, en caso de que se desarrolle una librería interna.
-
+8. Una carpeta `referencias/' con los archivos utilizados como referencia para este repositorio
+   
 ## Limitaciones del estudio
 
 Este análisis está sujeto a varias limitaciones, entre ellas:
 
 1. **Disponibilidad y formato de los datos de scRNA-seq**: hasta que los datos de Ng et al. estén completamente accesibles, algunos pasos se basan en plantillas y supuestos sobre el formato 10X.
 2. **Calidad y homogeneidad de los datos bulk (GSE232710)**: diferencias en protocolos, tiempos de tratamiento y condiciones de cultivo pueden introducir ruido biológico y técnico.
-3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios.
+3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios. (es relativamente subjetiva)
 4. **Modelado simplificado**: los modelos de integración (scorecards, module scores) capturan solo una parte de la complejidad regulatoria subyacente.
 
 ## Autora del proyecto
 
 **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
+
 Github: @al3msvll
 
 Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
@@ -105,8 +106,7 @@ El repositorio está pensado como plantilla docente y base para futuros proyecto
 
 ## Licencia
 
-Este proyecto está pensado para ser distribuido bajo Licencia MIT (u otra licencia abierta equivalente).  
-Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
+Este proyecto está pensado para ser distribuido bajo Licencia MIT. Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
 
 ## Referencias
 
