@@ -1,7 +1,7 @@
 
 # Referencias
 
-## Artículo principal
+## Artículo Científico principal
 
 Ng ES, Sarila G, Li JY, Edirisnghe IS, et al. Long-term engrafting multilineage hematopoietic cells differentiated from human induced pluripotent stem cells. *Nat Biotechnol.* 2025;43(8):1274–1287. PMID: 39223325.
 
