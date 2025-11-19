@@ -1,4 +1,4 @@
-# iHSC_multiomic_Ng2025_GSE232710
+# ihsc_transcriptomics
 
 ## Análisis Multi-ómico de la Diferenciación de Células Madre Hematopoyéticas Derivadas de iPSC
 
