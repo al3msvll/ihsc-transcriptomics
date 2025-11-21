@@ -63,7 +63,7 @@ Para los datos de Ng et al., el flujo general es:
 
 ## Estructura del Repositorio
 
-iHSC_transcriptomics
+## iHSC_transcriptomics
 
 ```
 iHSC_transcriptomics
