@@ -65,7 +65,47 @@ Para los datos de Ng et al., el flujo general es:
 
 iHSC_transcriptomics
 
-<img width="1037" height="707" alt="markdown" src="https://github.com/user-attachments/assets/d34cd79a-ef98-4611-bf3f-f603422af791" />
+```
+iHSC_transcriptomics
+│
+├── README.md                     # descripción del proyecto
+├── .gitignore
+├── LICENSE                       # MIT
+│
+├── referencias/
+│   ├── REFERENCIAS.md            # referencias en texto
+│   └── referencias.bib           # BibTeX
+│
+├── docs/
+│   └── DATASETS_Ng_GSE232710.md  # cómo descargar/organizar los datos
+│
+├── data_raw/
+│   ├── scRNAseq_Ng2025/          # aquí irán las matrices 10X del paper
+│   └── GSE232710_bulk/           # aquí van GSE232710_RAW.tar y Series Matrix
+│
+├── data_processed/
+│   └── (objetos ya procesados: .h5ad, .rds, matrices limpias…) (por hacer)
+│
+├── scripts/
+│   ├── python/
+│   │   ├── unpack_GSE232710.py   # descomprimir el RAW.tar
+│   │   └── build_scRNAseq_h5ad.py # construye el .h5ad a partir de 10X
+│   │                               # (hay que tener los datos preparados)
+│   │
+│   └── R/
+│       ├── DESeq2_GSE232710_template.R
+│       └── Seurat_iHSC_template.R
+│
+├── notebooks/
+│   ├── 01_scRNAseq_iHSC_QC.ipynb        # QC + clustering + UMAP
+│   ├── 02_bulk_GSE232710_DE.ipynb       # DESeq2 results + volcano/genes
+│   └── 03_integration_sc_bulk.ipynb     # firmas bulk proyectadas en single-cell
+│
+└── results/
+    ├── figures/          # UMAPs, volcano plots, heatmaps, etc
+    ├── tables/           # TSV/CSV con DE, listas de genes, scores…
+    └── models/           # objetos pesados
+```
 
 Este repositorio se organiza de la siguiente forma:
 
@@ -117,30 +157,3 @@ Este proyecto está pensado para ser distribuido bajo Licencia MIT. Eres libre d
 2. Li JY, et al. GEO Series GSE232710: Bulk RNA-seq of PB BFP 3B5A supernatant under different retinoid treatments. *Gene Expression Omnibus (GEO)*.  
 Este repositorio se organiza de la siguiente forma:
    
-## Limitaciones del estudio
-
-Este análisis está sujeto a varias limitaciones, entre ellas:
-
-1. **Disponibilidad y formato de los datos de scRNA-seq**: hasta que los datos de Ng et al. estén completamente accesibles, algunos pasos se basan en plantillas y supuestos sobre el formato 10X.
-2. **Calidad y homogeneidad de los datos bulk (GSE232710)**: diferencias en protocolos, tiempos de tratamiento y condiciones de cultivo pueden introducir ruido biológico y técnico.
-3. **Anotación de tipos celulares**: la asignación de identidades celulares depende de marcadores conocidos y puede variar entre estudios. (es relativamente subjetiva)
-4. **Modelado simplificado**: los modelos de integración (scorecards, module scores) capturan solo una parte de la complejidad regulatoria subyacente.
-
-## Autora del proyecto
-
-**Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
-
-Github: @al3msvll
-
-Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
-El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
-
-
-## Licencia
-
-Este proyecto está pensado para ser distribuido bajo Licencia MIT. Eres libre de usar, modificar y distribuir este código, siempre que se incluya la nota de copyright y la declaración de la licencia.
-
-## Referencias
-
-1. Ng ES, Sarila G, Li JY, Edirisnghe IS, et al. Long-term engrafting multilineage hematopoietic cells differentiated from human induced pluripotent stem cells. *Nat Biotechnol.* 2025;43(8):1274–1287.  
-2. Li JY, et al. GEO Series GSE232710: Bulk RNA-seq of PB BFP 3B5A supernatant under different retinoid treatments. *Gene Expression Omnibus (GEO)*.  
