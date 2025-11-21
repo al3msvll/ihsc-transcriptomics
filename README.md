@@ -116,25 +116,6 @@ Este proyecto está pensado para ser distribuido bajo Licencia MIT. Eres libre d
 1. Ng ES, Sarila G, Li JY, Edirisnghe IS, et al. Long-term engrafting multilineage hematopoietic cells differentiated from human induced pluripotent stem cells. *Nat Biotechnol.* 2025;43(8):1274–1287.  
 2. Li JY, et al. GEO Series GSE232710: Bulk RNA-seq of PB BFP 3B5A supernatant under different retinoid treatments. *Gene Expression Omnibus (GEO)*.  
 Este repositorio se organiza de la siguiente forma:
-
-1. Un directorio principal con los archivos `README.md`, `.gitignore`, `LICENSE`
-2. Una carpeta `docs/` donde se documentan los datasets utilizados y notas metodológicas (`DATASETS_Ng_GSE232710.md`). 
-3. Una carpeta `data_raw/` con subcarpetas para los datos brutos: (en .gitignore ahora mismo porque está vacía)
-   - `scRNAseq_Ng2025/` para matrices 10X u objetos crudos del scRNA-seq.
-   - `GSE232710_bulk/` para los archivos RAW y la Series Matrix del RNA-seq bulk.
-4. Una carpeta `data_processed/` donde se guardan los objetos ya procesados (por ejemplo, `iHSC_scRNAseq_Ng2025_qc_norm.h5ad` o archivos `.rds`). 
-5. Una carpeta `scripts/` que contiene scripts en Python y R para:
-   - Descargar/organizar datos (`unpack_GSE232710.py`, `build_scRNAseq_h5ad.py`).
-   - Ejecutar análisis estadísticos (`DESeq2_GSE232710_template.R`, `Seurat_iHSC_template.R`).
-6. Una carpeta `notebooks/` que incluye cuadernos Jupyter para:
-   - QC y clustering de scRNA-seq (`01_scRNAseq_iHSC_QC.ipynb`).
-   - Análisis de expresión diferencial del bulk (`02_bulk_GSE232710_DE.ipynb`).
-   - Integración de firmas bulk en scRNA-seq (`03_integration_sc_bulk.ipynb`).
-7. Una carpeta `results/` dividida en:
-   - `figures/` para las figuras generadas (UMAPs, volcano plots, heatmaps, etc.).
-   - `tables/` para tablas de resultados (DESeq2, listas de genes, scores por cluster).
-   - `models/` para objetos pesados (modelos entrenados u otros artefactos).
-8. Una carpeta `referencias/' con los archivos utilizados como referencia para este repositorio
    
 ## Limitaciones del estudio
 
