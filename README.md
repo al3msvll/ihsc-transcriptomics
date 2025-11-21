@@ -141,7 +141,7 @@ Este análisis está sujeto a varias limitaciones, entre ellas:
 
 **Alejandra Martin Sevilla** (diseño del repositorio, flujo de análisis y documentación).  
 
-Github: @al3msvll
+[@al3msvll](https://github.com/al3msvll)
 
 Alejandra trabajó con @JackyLi en @RetroBiosciences en este proceso y está interesada en utilizar estos datos para compararlos con sus propios datos.
 El repositorio está pensado como plantilla docente y base para futuros proyectos de análisis de datos hematopoyéticos derivados de iPSC.
